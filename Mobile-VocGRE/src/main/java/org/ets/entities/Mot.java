@@ -2,11 +2,11 @@ package org.ets.entities;
 
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 @Entity
+@Table(name="MOT")
 public class Mot implements Serializable{
 	@Id @GeneratedValue
 	private int id;

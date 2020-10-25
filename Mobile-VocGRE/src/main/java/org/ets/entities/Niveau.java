@@ -1,9 +1,12 @@
 package org.ets.entities;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-public class Niveau {
+import javax.persistence.*;
+import java.io.Serializable;
+import 
+        
+@Entity
+@Table(name="NIVEAU")
+public class Niveau implements Serializable{
 	
 	@Id @GeneratedValue
 	private int id;
@@ -14,11 +17,11 @@ public class Niveau {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Niveau(int id, int numero, String mot) {
+	public Niveau(int id, int numero, String description) {
 		super();
 		this.id = id;
 		this.numero = numero;
-		this.mot = mot;
+		this.description = description;
 	}
 	
 	
